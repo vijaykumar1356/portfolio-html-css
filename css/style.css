@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    background-color: #3a3a3a;
+    /* font-family:sans-serif; */
+}
+a{
+    text-decoration: none;
+    color: #bac2b4
+}
+.navbar {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;   
+    font-weight: bold;
+    background: rgb(37, 56, 66);
+}
+.navbar > div {
+    font-size: 1.5rem;
+    padding:0.8rem 2rem;
+}
+.navbar .nav_links{
+    font-size: 1rem;
+    flex: 0 1 50%;
+    
+}
+.nav_links ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.nav_links ul li{
+    
+    cursor: pointer;
+    padding:0.8rem;
+    flex:auto;
+    text-align: center;
+}
+
+.nav_links > li > a{
+    border-radius: 7px;
+}
+.nav_links li:hover, .navbar>div:hover{
+    opacity: 0.5;
+}
+
+/* content in a grid layout */
+.main-grid {
+    display: grid;
+    justify-content: center;
+}
+
+/* nested grid container */
+.grid-container {
+    background: #576866;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    /* padding: 0.5em; */
+    justify-content: center;
+    line-height: 2em;
+}
+.grid-container > .image-div {
+    /* width: max-content; */
+    padding: 0;
+    margin: auto;
+    
+}
+.grid-container > .content-div{
+    padding: 2rem 3rem 0 3rem;
+    display: inline-block;
+
+}
+
+.grid-container:nth-child(odd){
+    background: #ddd;
+}
+.grid-container .content-div h2{
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 2rem;
+}
+.grid-container .content-div ul{
+    list-style-type: circle;
+    color: #000000;
+}
+.grid-container:nth-child(4) .content-div>h2{
+    text-align: center;
+}
+
+table {
+border-spacing: 0px;
+width: 100%;
+}
+
+td, th{
+    padding: 0.5em;
+    text-align: center; 
+}
+th{
+    background-color: #1e1f1f;
+    color:whitesmoke
+}
+td{
+    background-color: #bac2b4;
+}
+
+.grid-container > .image-div img {
+    max-width: 100%;
+    height: auto;
+    
+}
+.footer-grid {
+    padding: 0.5rem 1rem;
+}
+
+footer li a{
+    padding: 0.4em 0.7em;
+    cursor: pointer;
+    background: #a2cc09;
+    border-radius: 5px;
+    color: #030303;
+    font-weight: bold;
+}
+footer li a:hover{
+    opacity: 0.6;
+}
+@media only screen and (max-width: 550px){
+    .navbar{
+        flex-direction: column;
+    }
+    .nav_links ul {
+        flex-direction: column;
+    }
+    .main-grid {
+        margin: auto;
+    }
+    .grid-container{
+        grid-template-columns: 1fr;  
+        margin:auto      
+    }
+}
